@@ -27,7 +27,7 @@ answer_columns = st.columns(COLUMN_COUNT)
 
 for i, variant in enumerate(variants):
     column = get_column_by_index(i, answer_columns)
-    if words[word] == variant:
+    if check_correct(word, variant):
         if column.button(variant, key=i, disabled=answer is not None):
             st.session_state.answer = True
             st.rerun()

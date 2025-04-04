@@ -17,5 +17,5 @@ def get_variants(word) -> list[str]:
     return variants
 
 
-def check_correct(word, meaning):
+def check_correct(word, meaning) -> bool:
     return words[word] == meaning
